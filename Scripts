@@ -60,3 +60,88 @@ SOOrderedQuantity INT NOT NULL,
 OrdersID INT NOT NULL,
 SOLength INT NULL
 )
+
+INSERT INTO Inventory
+(InvCode,InvItem,InvDescription,InvCategory,InvReorderLevel,InvMarkup)
+VALUES ('16A3P220V','MENNEKES CARACONTAC CEE','220 INLET','ELECTRICAL',4,25)
+
+INSERT INTO Inventory
+(InvCode,InvItem,InvDescription,InvCategory,InvReorderLevel,InvMarkup)
+VALUES ('','RED LENS LIGHT 12VOLT/11WATT','KITCHEN RED LIGHT','ELECTRICAL',5,25)
+
+INSERT INTO Inventory
+(InvCode,InvItem,InvDescription,InvCategory,InvReorderLevel,InvMarkup)
+VALUES ('','10.0MM DRILL BIT','','TOOLS',4,25)
+
+INSERT INTO Supplier
+(SupName,SupContactPerson,SupREP,SupCellNr,SupBusinessNr,SupEmail,SupAddress,SupCity,SupProvince,SupPrefix,SupReorderTime)
+VALUES ('VOLTEX/ ATLAS GROUP','YVONNE','','082 070 7855','011 864 5255','','','','','EE',7)
+
+INSERT INTO Supplier
+(SupName,SupContactPerson,SupREP,SupCellNr,SupBusinessNr,SupEmail,SupAddress,SupCity,SupProvince,SupPrefix,SupReorderTime)
+VALUES ('SONDOR INDUSTRIES (PTY) LTD','DENNIS FRITZ','','','012 803 4471','dennis.fritz@sondor.co.za','266 HAAK STREET, WALTLOO','PRETORIA','GAUTENG','SON',7)
+
+INSERT INTO Supplier
+(SupName,SupContactPerson,SupREP,SupCellNr,SupBusinessNr,SupEmail,SupAddress,SupCity,SupProvince,SupPrefix,SupReorderTime)
+VALUES ('LEISURE QUIP','THINUS','','','011 822 4150','','','','','LQ',5)
+
+INSERT INTO Supplier
+(SupName,SupContactPerson,SupREP,SupCellNr,SupBusinessNr,SupEmail,SupAddress,SupCity,SupProvince,SupPrefix,SupReorderTime)
+VALUES ('BEARING MAN GROUP','Paul','','','012 849 1700','pretoriaeast@bmgworld.net','','','','BMG',4)
+
+INSERT INTO Supplier
+(SupName,SupContactPerson,SupREP,SupCellNr,SupBusinessNr,SupEmail,SupAddress,SupCity,SupProvince,SupPrefix,SupReorderTime)
+VALUES ('NATIONAL LUNA','KOBUS / CHANTAL','','','011 452 5438','sales@nationalluna.com','','','','NL',6)
+
+INSERT INTO InventoryStock
+(InventoryID,ISTotalStock)
+VALUES (1,9)
+
+INSERT INTO InventoryStock
+(InventoryID,ISTotalStock)
+VALUES (2,16)
+
+INSERT INTO InventoryStock
+(InventoryID,ISTotalStock)
+VALUES (3,4)
+
+INSERT INTO SubStockIN
+(InventoryID,SSIQuantityIN,SSIPrice,SSIDateReceived,SupplierID,SSIStockLeft)
+VALUES(1,9,'494.73','2017-09-21 09:38',1,9)
+
+INSERT INTO SubStockIN
+(InventoryID,SSIQuantityIN,SSIPrice,SSIDateReceived,SupplierID,SSIStockLeft)
+VALUES(2,16,'333.33','2017-09-21 09:43',5,16)
+
+INSERT INTO SubStockIN
+(InventoryID,SSIQuantityIN,SSIPrice,SSIDateReceived,SupplierID,SSIStockLeft)
+VALUES(3,5,'66.46','2017-09-21 09:47',4,5)
+
+INSERT INTO Orders
+(OrderNumber,SupplierID)
+VALUES(35,1)
+
+INSERT INTO Orders
+(OrderNumber,SupplierID)
+VALUES(74,2)
+
+INSERT INTO Orders
+(OrderNumber,SupplierID)
+VALUES(46,3)
+
+INSERT INTO Orders
+(OrderNumber,SupplierID)
+VALUES(227,4)
+
+INSERT INTO SubOrders
+(InventoryID,SOOrderedQuantity,OrdersID,SOLength)
+VALUES(1,9,1,'0')
+
+INSERT INTO SubOrders
+(InventoryID,SOOrderedQuantity,OrdersID,SOLength)
+VALUES(2,16,5,'')
+
+INSERT INTO SubOrders
+(InventoryID,SOOrderedQuantity,OrdersID,SOLength)
+VALUES(3,4,4,'')
+
