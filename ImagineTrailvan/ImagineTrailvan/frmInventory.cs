@@ -57,6 +57,8 @@ namespace ImagineTrailvan
                 tabLowStock.Controls.Add(dtgOrderInvList);
 
 
+
+
        /*         //to calculate total value of stock based on quantity and price on inventoryValue tab****
                 double totalStockValue = 0;
 

@@ -17,3 +17,6 @@ C:\Users\Carolien\Dropbox\Carolien.imagine\SQL IMAGINE DB PROJECT\ImagineTrailva
 C:\Users\Carolien\Dropbox\Carolien.imagine\SQL IMAGINE DB PROJECT\ImagineTrailvan\ImagineTrailvan\bin\Debug\de\MigraDoc.Rendering.resources.dll
 C:\Users\Carolien\Dropbox\Carolien.imagine\SQL IMAGINE DB PROJECT\ImagineTrailvan\ImagineTrailvan\bin\Debug\de\MigraDoc.RtfRendering.resources.dll
 C:\Users\Carolien\Dropbox\Carolien.imagine\SQL IMAGINE DB PROJECT\ImagineTrailvan\ImagineTrailvan\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\Carolien\Documents\GitHub\NewbyProgrammer\ImagineTrailvan\ImagineTrailvan\bin\Debug\ImagineTrailvan.exe.config
+C:\Users\Carolien\Documents\GitHub\NewbyProgrammer\ImagineTrailvan\ImagineTrailvan\obj\Debug\ImagineTrailvan.exe
+C:\Users\Carolien\Documents\GitHub\NewbyProgrammer\ImagineTrailvan\ImagineTrailvan\obj\Debug\ImagineTrailvan.pdb
