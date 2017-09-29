@@ -234,23 +234,21 @@ namespace ImagineTrailvan
 
          #endregion
 
-         public DataTable getInventoryVale(string tblName)
+         public DataTable getInventoryValue()
          {
              using (SqlConnection conn = new SqlConnection(connString))
              {
                  DataTable result = new DataTable();
-                 DataSet getds;
-                 cmd = new SqlCommand("Select * from " + tblName, conn);
+               //  DataSet getds;
+                 cmd = new SqlCommand("SELECT I.InventoryID,I.InvCode,I.InvItem,I.InvDescription,SI.SSIDateReceived,SI.SSIStockLeft,SI.SSIPrice FROM Inventory I INNER JOIN SubStockIN SI ON I.InventoryID=SI.InventoryID WHERE SI.SSIStockLeft !=0 ORDER BY SSIDateReceived DESC", conn);
                  adapter = new SqlDataAdapter(cmd);
                  SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
                  conn.Open();
-                 getds = new DataSet();
-                 adapter.Fill(getds, tblName);
+                 adapter.Fill(result);
                  conn.Close();
-                 result = getds.Tables[0];
                  return result;
              }//end of using (SqlConnection conn = new SqlConnection(connString))
-         }//end of public DataTable getTable(string tblName)
+         }//end of public DataTable getTable()
 
     }//end of public class DataAccess
  }//end of namespace ImagineTrailvan

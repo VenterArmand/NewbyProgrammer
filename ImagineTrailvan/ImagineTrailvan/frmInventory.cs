@@ -40,7 +40,7 @@ namespace ImagineTrailvan
                // dtgInventory.DataSource = datac.Inventory();
                 dtgInventory.DataSource = datac.getTable("Inventory");
                 dtgSuppliers.DataSource = datac.getTable("Supplier");
-               // dtgInventoryValue.DataSource = datac.InventoryValue();
+                dtgInventoryValue.DataSource = datac.getInventoryValue();
                 dtgSupplierSearch.DataSource = datac.getTable("Supplier");
                // dtgInventorySummary.DataSource = datac.InventoryValue();
                 dtgOrderSupSearch.DataSource = datac.getTable("Supplier");
@@ -56,20 +56,19 @@ namespace ImagineTrailvan
                 tabLowStock.Controls.Add(dtgSupInvList);
                 tabLowStock.Controls.Add(dtgOrderInvList);
 
-
-
-
-       /*         //to calculate total value of stock based on quantity and price on inventoryValue tab****
+            //to calculate total value of stock based on quantity and price on inventoryValue tab****
                 double totalStockValue = 0;
 
                 for (int i = 0; i < dtgInventoryValue.Rows.Count - 1; i++)
                 {
-                    totalStockValue += (double.Parse(dtgInventoryValue.Rows[i].Cells[4].Value.ToString())*double.Parse(dtgInventoryValue.Rows[i].Cells[5].Value.ToString()));
+                    totalStockValue += (int.Parse(dtgInventoryValue.Rows[i].Cells[5].Value.ToString())*double.Parse(dtgInventoryValue.Rows[i].Cells[6].Value.ToString()));
                 }//end of for (int i = 0; i < fieldInv.Length; i++)
                 txtStockValue.Text = totalStockValue.ToString();
+
+
                 //************************************************************************
 
-                //to calculate total value of only specified supplier on supplierSummary tab *******
+             /*   //to calculate total value of only specified supplier on supplierSummary tab *******
                 double totalSupplierValue = 0;
                 for (int i = 0; i < dtgInventorySummary.Rows.Count-1; i++)
                 {
