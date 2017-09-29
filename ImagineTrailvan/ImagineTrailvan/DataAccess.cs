@@ -234,6 +234,23 @@ namespace ImagineTrailvan
 
          #endregion
 
+         public DataTable getInventoryVale(string tblName)
+         {
+             using (SqlConnection conn = new SqlConnection(connString))
+             {
+                 DataTable result = new DataTable();
+                 DataSet getds;
+                 cmd = new SqlCommand("Select * from " + tblName, conn);
+                 adapter = new SqlDataAdapter(cmd);
+                 SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+                 conn.Open();
+                 getds = new DataSet();
+                 adapter.Fill(getds, tblName);
+                 conn.Close();
+                 result = getds.Tables[0];
+                 return result;
+             }//end of using (SqlConnection conn = new SqlConnection(connString))
+         }//end of public DataTable getTable(string tblName)
 
     }//end of public class DataAccess
  }//end of namespace ImagineTrailvan
